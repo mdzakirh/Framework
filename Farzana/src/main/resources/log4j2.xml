@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+	<!-- In the properties tag we are mentioning the log file path in below 
+		format -->
+
+
+	<Properties>
+		<Property name="basePath">./src/main/resources.logs</Property> 
+	</Properties>
+
+
+	<Appenders>
+
+		<!-- In the RollingFile tag we are mentioning logs should print into the 
+			 file -->
+
+		<RollingFile name="File" fileName="${basePath}/prints.log"
+			filePattern="${basePath}/prints-%d{yyyy-MM-dd}.log">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+			<!-- In the SizeBasedTriggeringPolicy tag: when each files are files up 
+				with 500 then it will create another by using filePattern will create file 
+				name -->
+			<SizeBasedTriggeringPolicy size="500" />
+		</RollingFile>
+
+		<!-- In the Console tag we are mentioning logs should print into the console -->
+
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+
+	</Appenders>
+
+	<Loggers>
+
+		<!-- In the Logger tag: we are mentioning specific package name or class 
+			name or any specific requirement -->
+		<!-- In the level tag: we are mentioning what types of logs it should print, 
+			trace means prints all logs -->
+		<!-- in the additivity tag false means to avoid duplicate logs -->
+
+	<!--  	<Logger name="automationTestCases.HomePage.java" level="error"
+			additivity="false">
+			<AppenderRef ref="Console" />
+		</Logger> -->
+
+		<!-- Root tag means print for whole project, and trace means print all 
+			type of logs -->
+
+		<Root level="trace">
+			<AppenderRef ref="Console" />
+		</Root>
+
+	</Loggers>
+
+</Configuration>

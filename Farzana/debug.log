@@ -1,0 +1,5 @@
+[0211/184603.688:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0211/184603.689:ERROR:exception_snapshot_win.cc(98)] thread ID 3204 not found in process
+[0212/182751.283:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0212/182751.296:ERROR:exception_snapshot_win.cc(98)] thread ID 27944 not found in process
+[0212/182751.296:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
