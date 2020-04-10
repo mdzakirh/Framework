@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Geico Insurance Project">
+
+	<listeners>
+		<listener
+			class-name="com.geico.qa.ExtentReportListener.ExtentReportListener" />
+		<!-- <listener class-name="com.geico.qa.util.TestngListeners" /> -->
+	</listeners>
+	<test thread-count="5" name="Geico Application Test">
+		<classes>
+			<class name="com.geico.qa.testcases.LandingPageTest" />
+			<!-- <class name="com.geico.qa.testcases.CustomerInformationPageTest"/> -->
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
